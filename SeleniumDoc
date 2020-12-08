@@ -1,0 +1,68 @@
+Selenium 
+	It is a functional testing.
+	Test Only web based applications.
+	
+	Components of Selenium Suite:
+	1.Selenium IDE
+		Record-N-Playback features.
+		Plugin to browsers:Firefox and Chrome
+		
+	2.Selenium RC-outdated component
+		requires scripting
+		problem:same origin policy
+		
+	3.Selenium Webdriver
+		requires scripting in following languages:JAVA,Python,Ruby,Groovy,JS,C#.
+		supports cross browser or multi browser testing.
+		supports data driven testing framework,keyboard driven,hybrid driven.
+		
+	4.Selenium Grid
+		can run Selenium webdriver scripts on multiple systems at a time.
+	
+-----------------------------------------------------------------------------------------------
+
+website under test:https://opensource-demo.orangehrmlive.com/index.php/auth/login
+
+Login Page:
+Steps:
+	1.Open browser
+	2.Enter the URL
+	3.Enter the Username:Admin
+	4.Enter the Password:admin123
+	5.Click on Login Button
+	
+	Expected Results:Successful Login and Dash board Should be displayed.
+	
+-------------------------------------------------------------------------------------------------
+
+//open browser window
+		System.setProperty("webdriver.chrome.driver", "E:\\CDAC_Online\\ASDM\\PRACTICAL\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver =new ChromeDriver();
+		
+//passes the URL
+		driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
+	
+//Locators 
+	To locate the elements on the web page we have to use Element Locators:
+	driver.findElement(By.name("txtUsername")).sendKeys("Admin");
+
+	
+//Element Locators:
+1.Name
+2.Id
+	Above element locators are directly available as "tag attributes".
+3.xpath
+4.CSS Selector
+5.tagName
+6.ClassName
+7.linkText
+8.PartialLinkText
+
+----------------------------------------------------------------------------------------
+TestNG framework:
+	Annotations:
+		@annotationName
+		are always followed by functions.
+		Program is executed with the help of annotations.
+		runs the functions without calling them without any object and sequences the execution.
+		
